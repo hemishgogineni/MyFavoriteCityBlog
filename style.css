@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Attractions & Culture Image + Text Layout */
+.attraction-item, .culture-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.attraction-item img, .culture-item img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Gallery Page */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Index Page Background */
+.index-page {
+    position: relative;
+    height: 100vh;
+    background: url('images/index-background.jpg') no-repeat center center/cover;
+}
+
+.index-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.45); /* 45% opacity overlay */
+}
+
+.index-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: black;
+    padding-top: 200px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Homepage Corner Images */
+.corner {
+    position: absolute;
+    width: 200px; /* updated size */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.top-left { top: 20px; left: 20px; }
+.top-right { top: 20px; right: 20px; }
+.bottom-left { bottom: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }

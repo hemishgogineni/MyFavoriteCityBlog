@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div style="
+        background: url('images/index/background.jpg') no-repeat center center/cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.35;
+        z-index: -1;
+    "></div>
+
+    <!-- Navigation -->
+    <header style="text-align: center; padding: 15px; background: rgba(0,0,0,0.5); color: white;">
+        <nav>
+            <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
+            <a href="attractions.html" style="color: white; margin: 0 15px; text-decoration: none;">Attractions</a>
+            <a href="culture.html" style="color: white; margin: 0 15px; text-decoration: none;">Culture</a>
+            <a href="gallery.html" style="color: white; margin: 0 15px; text-decoration: none;">Gallery</a>
+            <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none;">Contact</a>
+        </nav>
+    </header>
+
+     <main style="max-width: 800px; margin: 40px auto; padding: 20px 60px; background: transparent; border-radius: 10px; color: black;">
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
+            
+            <div>
+                <label style="font-weight: bold;">Name:</label><br>
+                <input type="text" name="name" required 
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; 
+                           border-radius: 8px; font-size: 14px; outline: none; 
+                           transition: 0.3s;"
+                    onfocus="this.style.borderColor='#4CAF50';" 
+                    onblur="this.style.borderColor='#ccc';">
+            </div>
+
+            <div>
+                <label style="font-weight: bold;">Email:</label><br>
+                <input type="email" name="email" required 
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; 
+                           border-radius: 8px; font-size: 14px; outline: none; 
+                           transition: 0.3s;"
+                    onfocus="this.style.borderColor='#4CAF50';" 
+                    onblur="this.style.borderColor='#ccc';">
+            </div>
+
+            <div>
+                <label style="font-weight: bold;">Message:</label><br>
+                <textarea name="message" required 
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; 
+                           border-radius: 8px; font-size: 14px; height: 50 px; 
+                           outline: none; resize: none; transition: 0.3s;"
+                    onfocus="this.style.borderColor='#4CAF50';" 
+                    onblur="this.style.borderColor='#ccc';"></textarea>
+            </div>
+
+            <button type="submit" 
+                style="padding: 12px; background-color: #4CAF50; 
+                       color: white; border: none; border-radius: 8px; 
+                       font-size: 16px; cursor: pointer; transition: 0.3s;"
+                onmouseover="this.style.backgroundColor='#45a049';" 
+                onmouseout="this.style.backgroundColor='#4CAF50';">
+                Send
+            </button>
+        </form>
+
+        <!-- Success Message -->
+        <p id="successMessage" style="display: none; color: green; font-weight: bold; margin-top: 15px;">
+            ✅ Your message has been successfully sent!
+        </p>
+    </main>
+    
+    <footer style="position: fixed;  bottom: 0;  left: 0;  padding: 8px 15px;  background: transparent;  color: black; font-size: 14px">
+    <p style="margin: 0;">&copy; 2025 Bengaluru Blog</p>
+</footer>
+
+    <!-- Success Message Script -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("successMessage").style.display = "block";
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
